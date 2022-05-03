@@ -1,20 +1,18 @@
 var mysql = require('mysql');
 const clear = require('clear');
 
-
-
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "3naDey0l3o.",
-  database: "company"
+  database: "company_db"
 });
 
 module.exports = {
  Select: (tablename) => {
   con.connect(function(err) {
       if (err) throw err;
-      con.query("SELECT * FROM "+tablename, function (err, result, fields) {
+      con.query("SELECT * FROM "+ tablename, function (err, result, fields) {
         if (err) throw err;
         console.log("\n");
         console.table(result);

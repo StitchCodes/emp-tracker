@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
-const inquirer = require('./lib/inquirer');
+const inquirer = require('./db/inquirer');
 
 clear();
 
